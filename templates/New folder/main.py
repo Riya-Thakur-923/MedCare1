@@ -1,13 +1,5 @@
 #imported libraries like flask, numpy, pandas, pickle
 
-
-
-
-
-
-
-
-
 from flask import Flask, request, render_template, jsonify  # type: ignore # Import jsonify
 import numpy as np # type: ignore
 import pandas as pd # type: ignore
