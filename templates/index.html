@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MedCare - Trusted Guidance for Better Health</title>
+
+    <!-- css connection -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+    <!-- favicon -->
+    <link rel="website icon" type="png" href="https://img.icons8.com/?size=100&id=utdeTrTZSM6p&format=png&color=000000">
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+    <div id="outerdiv">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <header class="container-fluid" style="position:relative; ">
+                <!-- Logo at the top-left corner -->
+                <div id="logo1">
+                    <img id="medcarelogo" src="logo1.jpeg" alt="image not found">
+                </div>
+
+                <a class="navbar-brand" href="#">MedCare</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="developer.html">Developers</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+
+                    </form>
+                </div>
+            </header>
+        </nav>
+
+
+        <!-- main form of page -->
+        <h3 class=" btnn7 mt-4 my-4 text-center text-green fade-in-image">MedCare</h3>
+
+
+      
+
+
+
+        <div class="container my-4 mt-4"
+            style="background-color: rgb(60, 102, 192); color: rgb(243, 231, 231); border-radius: 15px; padding: 40px; box-shadow:8px 8px 15px 3px  rgb(56, 55, 55)">
+            <form action="py_to_sql.py" method="post">
+                <div class="form-group">
+                    <label for="symptoms"><b>Select Symptoms:</label></div></b>
+                    <input type="text" class="form-control" , id="symptoms" name="symptoms"
+                        placeholder="Type symptoms such as itching, sleeping, aching etc">
+
+                </div>
+                <br>
+                <button type="button" id="startSpeechRecognition" class="btn btn-primary"
+                    style="margin-left:7%; border:1px solid white; border-radius:20px; margin-bottom: 25px;">
+                    Start Speech Recognition
+                </button>
+                <br>
+
+                <!-- Display the transcribed text here -->
+                <div name="mysysms" id="transcription"></div>
+
+                <!--- {% if message %}
+        <p>{{ message }}</p>-->
+
+                <br>
+
+              <center>  <button type="submit" class="btn btn-danger btn-lg"
+                    style="width: 25%; padding: 12px; margin-bottom: 15px; background-color: rgb(197, 20, 73);border-radius: 10px; box-shadow: 5px 5px 5px gray; ">Predict</button></center>
+            </form>
+        </div>
+
+
+
+        <!--{% if predicted_disease %} Results -->
+        <svg viewbox="-50 7 200 15">
+            <defs>
+              <linearGradient id="gradient">
+                <stop style="color:#399;"/>
+              </linearGradient>
+              <pattern id="wave" x="-0.6" y="-0.1" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                <path id="wavePath" d="M-40 10 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+                  <animateTransform
+                      attributeName="transform"
+                      begin="0s"
+                      dur="1.3s"
+                      type="translate"
+                      from="0,0"
+                      to="40,0"
+                      repeatCount="indefinite" />
+                </path>
+              </pattern>
+            </defs>
+            <text text-anchor="middle" x="50" y="14" font-size="8" fill="white" fill-opacity="0.1" style="font-family:serif;color:#399;" >Our System Result</text>
+            <text text-anchor="middle" x="50" y="14" font-size="8" fill="url(#wave)"  fill-opacity="1" style="font-family:serif; color:#399; ">Our System Result</text>
+          </svg>
+          
+      <!-- <div class="slide-right"> <h1 class="text-center my-4 mt-4"  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:rgb(11, 11, 11);">Our System Results</h1></div>-->
+        <div class="container">
+
+            <center>
+                <div class="result-container">
+                    <!-- Buttons to toggle display -->
+                    <button class="btnn1 btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#diseaseModal">Disease</button>
+                    <button class="btnn2 btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#descriptionModal">Description</button>
+                    <button class="btnn3 btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#precautionModal">Precaution</button>
+                    <button class="btnn4 btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#medicationsModal">Medications</button>
+                    <button class="btnn5 btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#workoutsModal">Workouts</button>
+                    <button class="btnn6 btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#dietsModal">Diets</button>
+                </div>
+            </center>
+        </div>
+        <!--{% endif %2
+
+Disease Modal -->
+        <div class="modal fade" id="diseaseModal" tabindex="-1" aria-labelledby="diseaseModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #020606; color:white;">
+                        <!-- Set header background color inline -->
+                        <h5 class="modal-title" id="diseaseModalLabel"> Disease</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> <!-- Set modal body background color inline -->
+                        <p>{{ predicted_disease }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Description Modal -->
+        <div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #020606; color:white;">
+                        <h5 class="modal-title" id="descriptionModalLabel">Description</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ dis_des }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Precaution Modal -->
+        <div class="modal fade" id="precautionModal" tabindex="-1" aria-labelledby="precautionModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #020606; color:white;">
+                        <h5 class="modal-title" id="precautionModalLabel">Precaution</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            {% for i in my_precautions %}
+                            <li>{{ i }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Medications Modal -->
+        <div class="modal fade" id="medicationsModal" tabindex="-1" aria-labelledby="medicationsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #020606; color:white;">
+                        <h5 class="modal-title" id="medicationsModalLabel">Medications</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            {% for i in medications %}
+                            <li>{{ i }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workouts Modal -->
+        <div class="modal fade" id="workoutsModal" tabindex="-1" aria-labelledby="workoutsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #020606; color:white;">
+                        <h5 class="modal-title" id="workoutsModalLabel">Workouts</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            {% for i in workout %}
+                            <li>{{ i }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diets Modal -->
+        <div class="modal fade" id="dietsModal" tabindex="-1" aria-labelledby="dietsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #020606; color:white;">
+                        <h5 class="modal-title" id="dietsModalLabel">Diets</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            {% for i in my_diet %}
+                            <li>{{ i }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            const startSpeechRecognitionButton = document.getElementById('startSpeechRecognition');
+            const transcriptionDiv = document.getElementById('transcription');
+
+            startSpeechRecognitionButton.addEventListener('click', startSpeechRecognition);
+
+            function startSpeechRecognition() {
+                const recognition = new webkitSpeechRecognition(); // Use webkitSpeechRecognition for compatibility
+
+                recognition.lang = 'en-US'; // Set the language for recognition
+
+                recognition.onresult = function (event) {
+                    const result = event.results[0][0].transcript;
+                    transcriptionDiv.textContent = result;
+                };
+
+                recognition.onend = function () {
+                    console.log('Speech recognition ended.');
+                };
+
+                recognition.start();
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+               
+    </div>
+
+    <!-- Footer Section -->
+    <footer style="margin-top:50px;">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>Welcome to MedCare a Medical Health center, where health meets technology for a brighter, healthier future.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Twitter</a> | 
+                    <a href="#">LinkedIn</a> | 
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form action="#">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" style="border-radius: 30px;" >Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> 2024 &copy; MedCare. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
