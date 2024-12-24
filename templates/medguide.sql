@@ -87,5 +87,6 @@ VALUES
 ('Psoriasis', "['Topical treatments', 'Phototherapy', 'Systemic medications', 'Biologics', 'Coal tar']"),
 ('Impetigo', "['Topical antibiotics', 'Oral antibiotics', 'Antiseptics', 'Ointments', 'Warm compresses']");
 
+select * from medications;
 
 
