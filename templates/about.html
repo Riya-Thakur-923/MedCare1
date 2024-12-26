@@ -1,48 +1,262 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container my-4 mt-4">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedCare - About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="style3.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      
+      
+    }
+
+    .about-section {
+      background: linear-gradient(to bottom right, #1c65a0, #82d4c1);
+      
+      background-position:centre top;
+      background-size:cover;
+      color: white;
+      padding: 50px 10px;
+      text-align: center;
+      
+      
+    }
+
+    .about-section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature {
+      background: white;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 280px;
+      text-align: left;
+      transition: 0.5s;
+    }
+
+    .feature h3 {
+      font-size: 1.4rem;
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #ffffff;
+      color: #4caf50;
+      text-transform: uppercase;
+      padding: 15px 29px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: 2px solid #ffffff;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top:40px;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      color: white;
+      border-color: white;
+      transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    .feature:hover{
+        background-color: antiquewhite;
+        
+        transform: translateY(-9px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        
+
+    }
 
 
-     <h3> About Us</h3>
 
-<p>Welcome to Medical Health center, where health meets technology for a brighter, healthier future.
-</p>
-<h3>Our Vision</h3>
 
-<p>We envision a world where access to healthcare information is not just a luxury but a fundamental right. Our journey began with a simple yet powerful idea: to empower individuals with the knowledge and tools they need to take control of their health.
-</p>
-<h3>Who We Are
-</h3>
-<p>We are a passionate team of healthcare professionals, data scientists, and technology enthusiasts who share a common goal: to make healthcare accessible, understandable, and personalized for you. With years of experience in both healthcare and cutting-edge technology, we've come together to create this platform as a testament to our commitment to your well-being.
-</p>
-<h3>Our Mission</h3>
+    #logo1 {
+    width: 50px;
+    height: 50px;
+    color: black;
+    margin-top: 0;
+    margin-left: 2px;
+    background-size: cover;
+    display: flex;
+}
 
-<p>At this website, our mission is to provide you with a seamless and intuitive platform that leverages the power of artificial intelligence and machine learning. We want to assist you in identifying potential health concerns based on your reported symptoms, all while offering a wealth of educational resources to enhance your health literacy.
-</p>
-<h3>How We Do It</h3>
+#medcarelogo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
 
-<p>Our platform utilizes a robust machine learning model trained on a vast dataset of symptoms and diseases. By inputting your symptoms, our system generates accurate predictions about potential illnesses, allowing you to make informed decisions about your health.
-</p>
-<h3>Your Well-being, Our Priority</h3>
 
-<p>Your health is our top priority. We understand that navigating the complexities of healthcare can be daunting. That's why we've gone the extra mile to provide not only accurate predictions but also comprehensive information about each disease. You'll find descriptions, recommended precautions, medications, dietary advice, and workout tips to support your journey to better health.
-</p>
-<h3>Join Us on this Journey
-</h3>
-<p>We invite you to explore our platform, engage with our educational content, and take control of your health journey. Together, we can revolutionize the way individuals access and understand healthcare information.
-</p>
-<p>Thank you for choosing [Your Website Name] as your trusted health companion. We are here to empower you with knowledge, support, and a brighter, healthier future.
-</p>
 
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+
+  
+    <!-- Navbar -->
+     <div class="">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <header class="container-fluid" style="position:relative; ">
+            <!-- Logo at the top-left corner -->
+            <div id="logo1">
+                <img id="medcarelogo" src="logo1.jpeg" alt="image not found">
+            </div>
+
+            <a class="navbar-brand" href="#">MedCare</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active"  href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="about.html">About</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="developer.html">Developers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+
+                </form>
+            </div>
+        </header>
+    </nav>
+  </div>
+
+
+
+
+   <div class="">
+  <section class="about-section">
+    <h1>Welcome to MedCare</h1>
+    <p>Your trusted companion for personalized health and wellness. MedCare combines the latest advancements in medical science with innovative technology to provide tailored recommendations for your healthcare journey.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Personalized Recommendations</h3>
+        <p>Receive advice tailored specifically to your medical history and lifestyle.</p>
+      </div>
+      <div class="feature">
+        <h3>Expert Insights</h3>
+        <p>Powered by trusted medical professionals and industry-leading data.</p>
+      </div>
+      <div class="feature">
+        <h3>Secure & Confidential</h3>
+        <p>Your health information is safeguarded with the highest standards of security.</p>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+    <a href="index.html" class="cta-button">Start Your Journey</a>
+  </section>
+
+</div>
+
+
+  <footer style="margin-top:0px;">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About</h4>
+            <p>Welcome to MedCare a Medical Health center, where health meets technology for a brighter, healthier future.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#">Twitter</a> | 
+                <a href="#">LinkedIn</a> | 
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <form action="#">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" style="border-radius: 30px;" >Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p> 2024 &copy; MedCare. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
 </html>
